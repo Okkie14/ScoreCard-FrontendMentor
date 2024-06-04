@@ -31,7 +31,6 @@ const getData = async () => {
                 sumInfo.appendChild(p2);
                 
                 // Logs the info to the console and updates the sumInfo to the correct class "category"
-                console.log(sumInfo);
                 category.appendChild(sumInfo);
             })
         }

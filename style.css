@@ -55,6 +55,12 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    display: grid;
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-regular);
+    font-family: var(--ff);
+    height: 100dvh;
+    align-content: center;
   }
   /*
     6. Improve media defaults
@@ -76,11 +82,12 @@
     overflow-wrap: break-word;
   }
 
-body {
-    display: grid;
-    font-size: var(--fs-regular);
-    font-weight: var(--fw-regular);
-    font-family: var(--ff);
+main {
+  display: flex;
+  height: 450px;
+  border-radius: 1.5em;
+  justify-self: center;
+  box-shadow: 10px 10px 30px var(--neutral-light-lavender);
 }
 
 .your-score {
@@ -89,16 +96,18 @@ body {
                 var(--gradient-slate-blue) 0%,
                 var(--gradient-royal-blue) 62%);
     color: var(--neutral-light-lavender);
+    align-content: center;
+    border-radius: 1.5em;
 }
 
 #result-title {
   padding-top: 1em;
-  font-size: 0.95rem;
+  font-size: 1.25rem;
 }
 
 .score {
-    width: 35%;
-    height: 60%;
+    width: 60%;
+    height:65%;
     background: linear-gradient(180deg,
                 var(--gradient-violet) 10%,
                 var(--gradient-persian-blue) 100%);
@@ -139,10 +148,12 @@ body {
   font-size: 0.75rem;
   margin: 0 auto;
   padding-top: 1em;
+  align-content: center;
 }
 
 .summary h2 {
   margin-bottom: 0.75em;
+  font-size: 1.5rem;
 }
 
 .summ-info {
@@ -187,22 +198,47 @@ body {
 }
 
 .button {
-  padding: 0.1em;
   border-radius: 50px;
   background-color: var(--neutral-gray);
   border: none;
   color: var(--neutral-white);
   font-size: 1rem;
-  margin-bottom: 1em;
+  height: 50px;
+  width: 100%;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 11px;
+}
+
+.summary-container {
+  width: 90%;
+  margin-inline: auto;
 }
 
 /* Mobile */
 @media  only screen and (max-width: 445px) {
+  body{
+    align-content: normal;
+  }
+
+  main {
+    flex-direction: column;
+    height: fit-content;
+  }
+
   .your-score {
     padding-top: 1.35em;
     padding-bottom: 1.35em;
+    border-radius: 0;
     border-bottom-left-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
+  }
+
+  .score {
+    width: 40%;
   }
 
   .summary {
@@ -211,23 +247,14 @@ body {
 
   .button {
     padding: 0.75em;
+    margin-bottom: 1em;
   }
 }
 
 /* Tablet */
 @media  only screen and (min-width: 445px) and (max-width:1200px){
   main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'Score Summary';
-    height: 70%;
-    margin: auto 0;
-    padding: 0;
-    border-radius: 1.5em;
-    overflow: hidden;
     width: 80%;
-    justify-self: center;
-    box-shadow: 10px 10px 30px var(--neutral-light-lavender);
   }
 
   .score {
@@ -243,22 +270,12 @@ body {
 
 @media  only screen and (min-width: 1200px) {
   main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'Score Summary';
     width: 40%;
-    height: 85%;
-    margin: auto 0;
-    padding: 0;
-    border-radius: 1.5em;
-    overflow: hidden;
-    justify-self: center;
-    box-shadow: 10px 10px 30px var(--neutral-light-lavender);
   }
 
   .your-score {
-    display: grid;
     align-items: middle;
+    width: 50%;
   }
 
   .score {
@@ -268,9 +285,8 @@ body {
   }
 
   .summary {
-    width: 90%;
+    width: 50%;
     height: 95%;
-    margin: auto;
   }
 
   .button:hover {
