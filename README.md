@@ -1,6 +1,6 @@
 # Frontend Mentor - Results summary component solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -28,12 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/Project%20Screenshot.png)
+![](./images/ResultScore.JPG)
 
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [https://www.frontendmentor.io/solutions/resultssummarycomponent-r2TV5isqBG]
+- Live Site URL: [https://score-card-frontend-mentor.vercel.app/]
 
 ## My process
 
@@ -55,6 +55,7 @@ To see how you can add code snippets, see below:
 ```html
 <div id="category" class="category"></div>
 ```
+
 ```css
 .summ-info:first-child {
   background-color: var(--primary-red-box);
@@ -76,6 +77,7 @@ To see how you can add code snippets, see below:
   color: var(--primary-cobalt);
 }
 ```
+
 ```js
 const getData = async () => {
     try{
